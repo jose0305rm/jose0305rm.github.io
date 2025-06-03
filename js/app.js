@@ -24,14 +24,14 @@
 
         // si alguno de los campos del objeto esta vacio se muetra el mensaje de campos vacios
         if (Object.values(datos).some(dato => dato.trim() === '')) {
-            mostrarMensaje('error', 'Todos los campos deben ser obligatorios');
+            mostrarMensaje('error', 'All fields are required');
             return;
         };
 
         formulario.action = "https://formsubmit.co/0907ef125def1458ac75c7549114df4c";
         formulario.method = 'POST';
         formulario.submit();
-        mostrarMensaje('exito', "Datos enviados!!")
+        mostrarMensaje('exito', "Data Sent!!")
 }
 
 
