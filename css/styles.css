@@ -1,0 +1,438 @@
+/* styles.css */
+
+/* Reset básico y estilos generales */
+body {
+    font-family: 'Open Sans', sans-serif;
+    line-height: 1.6;
+    margin: 0;
+    padding: 0;
+    background-color: #f8f9fa; /* Un gris muy claro */
+    color: #343a40; /* Gris oscuro */
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Gidole', sans-serif;
+    font-weight: normal;
+    margin-top: 0;
+    color: #212529; /* Negro casi */
+}
+
+a {
+    color: #007bff; /* Azul principal */
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+a:hover {
+    color: #0056b3; /* Azul más oscuro al pasar el ratón */
+}
+
+/* Header y Navegación */
+.nav {
+    background-color: #fff;
+    color: #212529;
+    padding: 1rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+    position: sticky;
+    top: 0;
+    z-index: 100;
+}
+
+.nav p {
+    margin: 0;
+    font-size: 1.5rem;
+    color: #007bff;
+}
+
+.nav-menu {
+    display: flex;
+    gap: 1.5rem;
+}
+
+.nav-menu a {
+    padding: 0.5rem 0;
+    font-weight: 500;
+}
+
+.nav-menu a:hover {
+    color: #0056b3;
+}
+
+/* Sección Home */
+.home {
+    background-color: #e9ecef; /* Gris claro */
+    padding: 5rem 2rem;
+    text-align: center;
+}
+
+.home h1 {
+    font-size: 3rem;
+    margin-bottom: 0.5rem;
+}
+
+.home h3 {
+    font-size: 1.5rem;
+    color: #6c757d; /* Gris medio */
+    margin-bottom: 1.5rem;
+}
+
+.home .button {
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.home .button a {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 0.75rem 1.5rem;
+    border-radius: 0.25rem;
+    font-weight: 500;
+    transition: background-color 0.3s ease;
+}
+
+.home .button a:hover {
+    background-color: #0056b3;
+}
+
+/* Sección About Me */
+.about-me {
+    padding: 4rem 2rem;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.about-me h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+    text-align: center;
+}
+
+.about-me p {
+    line-height: 1.8;
+    margin-bottom: 1.5rem;
+}
+
+/* Sección Skills */
+.skills {
+    background-color: #fff;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.skills h2 {
+    font-size: 2.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills h5 {
+    color: #6c757d;
+    margin-bottom: 2rem;
+    font-weight: normal;
+}
+
+.skills-cards {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 2rem;
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.skill-card_1,
+.skill-card_2,
+.skill-card_3 {
+    background-color: #e9ecef;
+    padding: 1.5rem;
+    border-radius: 0.5rem;
+    text-align: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.skill-card_1:hover,
+.skill-card_2:hover,
+.skill-card_3:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.15);
+}
+
+.skills-cards p.card1-icon,
+.skills-cards p.card2-icon,
+.skills-cards p.card3-icon {
+    font-size: 2rem;
+    color: #007bff;
+    margin-bottom: 0.75rem;
+}
+
+.skills-cards h4 {
+    font-size: 1.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.skills-cards p.card1-parragraph,
+.skills-cards p.card2-parragraph,
+.skills-cards p.card3-parragraph {
+    font-size: 0.9rem;
+    line-height: 1.7;
+    text-align: left;
+    margin-bottom: 1rem;
+}
+
+.skills-cards a {
+    display: inline-block;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.skills-cards a:hover {
+    color: #0056b3;
+}
+
+/* Sección Proyectos */
+.proyects {
+    background-color: #f8f9fa;
+    padding: 4rem 2rem;
+    text-align: center;
+}
+
+.proyects p {
+    font-size: 3rem;
+    color: #63E6BE; /* Un color de acento */
+    margin-bottom: 1rem;
+}
+
+.proyects-info h3 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+}
+
+/* Estilos básicos para el Swiper (si decides activarlo) */
+.swiper-container {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.swiper-container a:hover{
+    color: rgb(80, 158, 221)
+}
+
+.swiper-slide {
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 0.5rem;
+    padding: 2rem;
+    text-align: center;
+    font-size: 1rem;
+}
+
+.swiper-pagination-bullet {
+    width: 10px;
+    height: 10px;
+    display: inline-block;
+    border-radius: 50%;
+    background: #007bff;
+    opacity: 0.8;
+    margin: 0 0.25rem;
+}
+
+.swiper-pagination-bullet-active {
+    opacity: 1;
+}
+
+/* Sección Contacto */
+.contact {
+    background-color: #fff;
+    padding: 4rem 2rem;
+}
+
+.contact .form {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 2rem;
+    border-radius: 0.5rem;
+    box-shadow: 0 0.125rem 0.25rem rgba(0, 0, 0, 0.075);
+}
+
+.contact .form-group {
+    margin-bottom: 1.5rem;
+}
+
+.contact label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+    color: #495057; /* Gris un poco más oscuro */
+}
+
+.contact input[type="email"],
+.contact input[type="text"],
+.contact textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ced4da; /* Gris claro de borde */
+    border-radius: 0.25rem;
+    font-size: 1rem;
+    transition: border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+
+.contact input[type="email"]:focus,
+.contact input[type="text"]:focus,
+.contact textarea:focus {
+    border-color: #007bff;
+    outline: 0;
+    box-shadow: 0 0 0 0.2rem rgba(0, 123, 255, 0.25);
+}
+
+.contact textarea {
+    min-height: 100px;
+}
+
+.contact input[type="submit"] {
+    background-color: #28a745; /* Verde para enviar */
+    display: block;
+    color: #fff;    
+    width: 80%;
+    margin: 0 auto;
+    padding: 10px 3px;
+    border: none;
+    border-radius: 0.25rem;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.contact input[type="submit"]:hover {
+    background-color: #1e7e34; /* Verde más oscuro al pasar el ratón */
+}
+
+.sw{
+    background-size: cover;
+    background-position: center center;
+    background-repeat: no-repeat;
+}
+
+.sw a{
+    color: white;
+} 
+
+/* Clases para mensaje de error de formulario */
+.error{
+    background-color: rgb(240, 171, 171);
+    text-align: center;
+    color: rgb(172, 18, 18);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 0.25rem;
+}
+
+.exito{
+    background-color: rgb(193, 240, 171);
+    text-align: center;
+    color: rgb(16, 122, 33);
+    padding: 5px;
+    margin: 10px;
+    border-radius: 0.25rem;
+}
+
+
+/* Media Queries para hacerlo más responsivo */
+@media (max-width: 768px) {
+    .nav-menu {
+        gap: 1rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.9rem;
+    }
+
+    .home h1 {
+        font-size: 2.5rem;
+    }
+
+    .home h3 {
+        font-size: 1.2rem;
+    }
+
+    .home .button {
+        flex-direction: column;
+        align-items: center;
+        gap: 0.75rem;
+    }
+
+    .about-me h2 {
+        font-size: 2rem;
+    }
+
+    .skills h2 {
+        font-size: 2rem;
+    }
+
+    .skills-cards {
+        grid-template-columns: 1fr;
+    }
+
+    .proyects h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 480px) {
+    .nav {
+        padding: 1rem;
+    }
+
+    .nav p {
+        font-size: 1.2rem;
+    }
+
+    .nav-menu {
+        gap: 0.75rem;
+    }
+
+    .nav-menu a {
+        font-size: 0.8rem;
+    }
+
+    .home {
+        padding: 3rem 1rem;
+    }
+
+    .home h1 {
+        font-size: 2rem;
+    }
+
+    .home h3 {
+        font-size: 1rem;
+    }
+
+    .about-me {
+        padding: 3rem 1rem;
+    }
+
+    .skills {
+        padding: 3rem 1rem;
+    }
+
+    .proyects {
+        padding: 3rem 1rem;
+    }
+
+    .contact {
+        padding: 3rem 1rem;
+    }
+
+    .contact .form {
+        padding: 1.5rem;
+    }
+}
